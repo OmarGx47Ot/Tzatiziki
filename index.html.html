@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Greek Gyro House Sauce Recipe</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aegean: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#006699',
+                            800: '#1a365d',
+                            900: '#0f2442',
+                        },
+                        olive: {
+                            500: '#6b8e23',
+                            600: '#55721a',
+                            700: '#415813',
+                        },
+                        sand: '#FAF8F5',
+                        warmcard: '#F4EFEA'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #006699;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-sand text-slate-800 font-sans antialiased selection:bg-aegean-500 selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-sand/90 backdrop-blur-md border-b border-stone-200/60 transition-all duration-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-aegean-800 text-white flex items-center justify-center font-serif font-bold text-xl shadow-md">
+                        🇬🇷
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-lg sm:text-xl text-aegean-900 block leading-tight">Ouzo & Olive</span>
+                        <span class="text-xs text-olive-600 font-semibold tracking-wider uppercase">Authentic Greek Kitchen</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#hero" class="hover:text-aegean-500 transition-colors">Overview</a>
+                    <a href="#video" class="hover:text-aegean-500 transition-colors">Video Masterclass</a>
+                    <a href="#pro-tips" class="hover:text-aegean-500 transition-colors">Secrets & Tips</a>
+                    <a href="#ingredients" class="hover:text-aegean-500 transition-colors">Ingredients</a>
+                    <a href="#steps" class="hover:text-aegean-500 transition-colors">Step-by-Step</a>
+                    <a href="#faq" class="hover:text-aegean-500 transition-colors">FAQ</a>
+                </div>
+                <a href="#ingredients" class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-aegean-800 text-white text-xs sm:text-sm font-semibold hover:bg-aegean-900 transition-all shadow-sm hover:shadow-md">
+                    Start Cooking
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 sm:space-y-16">
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-aegean-900 via-aegean-800 to-slate-900 text-white p-6 sm:p-10 lg:p-12 shadow-2xl">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-olive-500/20 border border-olive-500/30 text-olive-600 text-xs font-semibold tracking-wide uppercase text-emerald-300">
+                        <i class="fa-solid fa-star text-amber-400"></i> Authentic Street-Food Style Tzatziki
+                    </div>
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Authentic Greek <br class="hidden sm:inline"/><span class="text-amber-200 italic font-normal">Gyro House Sauce</span>
+                    </h1>
+                    <p class="text-slate-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                        Master the cool, garlic-infused, extra-creamy Greek cucumber sauce from scratch. Perfect for gyros, grilled meats, crisp veggies, and warm pita bread.
+                    </p>
+                    
+                    <!-- Recipe Quick Stats Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-white/10 my-6">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs text-slate-400 block uppercase tracking-wider">Prep Time</span>
+                            <span class="font-bold text-lg text-white">15 Mins</span>
+                        </div>
+                        <div class="text-center sm:text-left border-l border-white/10 pl-2 sm:pl-4">
+                            <span class="text-xs text-slate-400 block uppercase tracking-wider">Chill Time</span>
+                            <span class="font-bold text-lg text-white">1 Hour</span>
+                        </div>
+                        <div class="text-center sm:text-left sm:border-l border-white/10 pl-2 sm:pl-4">
+                            <span class="text-xs text-slate-400 block uppercase tracking-wider">Skill Level</span>
+                            <span class="font-bold text-lg text-emerald-400">Easy (A-Z)</span>
+                        </div>
+                        <div class="text-center sm:text-left border-l border-white/10 pl-2 sm:pl-4">
+                            <span class="text-xs text-slate-400 block uppercase tracking-wider">Yield</span>
+                            <span class="font-bold text-lg text-white" id="heroServingsDisplay">6-8 Servings</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#ingredients" class="px-6 py-3.5 rounded-xl bg-olive-600 hover:bg-olive-700 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                            <i class="fa-solid fa-utensils"></i> Jump to Recipe
+                        </a>
+                        <a href="#video" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md transition-all border border-white/20 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-play text-amber-300 text-lg"></i> Watch Tutorial
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-800 group">
+                        <img src="https://images.unsplash.com/photo-1571194917409-e85d92df9a57?auto=format&fit=crop&w=800&q=80" 
+                             alt="Greek Tzatziki Gyro Sauce Bowl" 
+                             class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/600x600/1a365d/ffffff?text=Greek+Gyro+Sauce'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+                            <p class="text-xs text-slate-300 italic">
+                                "The secret is in the cucumber drain!" &mdash; Chef Nikos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Tutorial Section -->
+        <section id="video" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200/80">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Visual Masterclass</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-aegean-900">Watch How It's Made</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Follow along with this step-by-step video guide to learn proper cucumber squeezing techniques and ingredient ratios.</p>
+            </div>
+            
+            <div class="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden bg-slate-900 shadow-xl border border-stone-200">
+                <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/5aLlhO-U5z0" 
+                    title="Authentic Greek Tzatziki Video Tutorial" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Pro Tips / Secrets Section -->
+        <section id="pro-tips" class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">The Greek Kitchen Rules</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">4 Golden Secrets to Perfection</h2>
+                <p class="text-slate-600 text-sm">Avoid common beginner mistakes like watery or bland sauce with these simple principles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tip 1 -->
+                <div class="bg-warmcard/70 border border-stone-200/70 p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-aegean-500 text-white flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        1
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Thoroughly Drain the Cucumber</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Cucumbers are over 95% water. Grate them, salt them, wait 10 minutes, then wring out every single drop using a cheesecloth or clean kitchen towel. Water is the #1 enemy of thick Tzatziki!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="bg-warmcard/70 border border-stone-200/70 p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-olive-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        2
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Use Authentic Full-Fat Yogurt</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Always opt for full-fat (10% or 5%) strained Greek yogurt. If using standard yogurt, let it drain through a coffee filter overnight to achieve the signature creamy consistency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="bg-warmcard/70 border border-stone-200/70 p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        3
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Finely Grated Fresh Garlic</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Never use garlic powder! Microplane or finely grate fresh garlic cloves so they blend smoothly into the yogurt without harsh crunchy bits.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 4 -->
+                <div class="bg-warmcard/70 border border-stone-200/70 p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-slate-700 text-white flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        4
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Chilling is Essential</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Freshly mixed Tzatziki can taste sharp. Let it rest in the refrigerator for at least 1 hour before serving to let the garlic, dill, and lemon mellow into harmony.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Ingredients Section -->
+        <section id="ingredients" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-stone-100">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Mise En Place</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Ingredients Checklist</h2>
+                    <p class="text-slate-500 text-sm mt-1">Check off items as you gather them in your kitchen.</p>
+                </div>
+
+                <!-- Interactive Serving Scaler -->
+                <div class="bg-sand p-4 rounded-2xl border border-stone-200 flex items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Batch Size:</span>
+                    <div class="flex items-center space-x-2">
+                        <button id="btnScaleDown" onclick="changeScale(-0.5)" class="w-9 h-9 rounded-xl bg-white border border-stone-300 text-slate-700 font-bold hover:bg-slate-100 active:scale-95 transition-all shadow-sm flex items-center justify-center">
+                            -
+                        </button>
+                        <span id="scaleLabel" class="font-bold text-aegean-800 text-base min-w-[70px] text-center">1x (2 cups)</span>
+                        <button id="btnScaleUp" onclick="changeScale(0.5)" class="w-9 h-9 rounded-xl bg-white border border-stone-300 text-slate-700 font-bold hover:bg-slate-100 active:scale-95 transition-all shadow-sm flex items-center justify-center">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List of Ingredients -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8" id="ingredientsList">
+                <!-- Injected via JavaScript for live scaling -->
+            </div>
+        </section>
+
+        <!-- Interactive Step-by-Step Instructions -->
+        <section id="steps" class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-olive-600">A to Z Workflow</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Step-by-Step Instructions</h2>
+                </div>
+                <!-- Progress Indicator -->
+                <div class="bg-white px-5 py-3 rounded-2xl border border-stone-200 shadow-sm flex items-center gap-4">
+                    <div class="text-right">
+                        <span class="text-xs text-slate-500 block uppercase tracking-wider font-semibold">Progress</span>
+                        <span id="progressText" class="font-bold text-aegean-800 text-sm">0 of 5 Done</span>
+                    </div>
+                    <div class="w-24 bg-slate-100 h-3 rounded-full overflow-hidden border border-slate-200">
+                        <div id="progressBar" class="bg-olive-600 h-full w-0 transition-all duration-500"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steps Grid / Container -->
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="step-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all" id="stepCard1">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step1Check" onclick="toggleStep(1)" class="w-6 h-6 mt-1 rounded text-olive-600 focus:ring-olive-500 border-gray-300 cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">1. Grate the Cucumber</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Prep Work</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Wash 1 large English cucumber thoroughly. You can keep the skin on for extra color and vitamins or peel it if preferred. Using the large holes of a box grater, grate the cucumber into a bowl.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 (With Interactive Timer) -->
+                <div class="step-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all" id="stepCard2">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step2Check" onclick="toggleStep(2)" class="w-6 h-6 mt-1 rounded text-olive-600 focus:ring-olive-500 border-gray-300 cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">2. Salt & Squeeze (The Secret Step)</h3>
+                                <span class="px-3 py-1 bg-amber-50 text-amber-800 text-xs font-semibold rounded-full border border-amber-100">Crucial Step</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Toss the grated cucumber with ½ teaspoon of sea salt. Let it rest for 10 minutes to draw out moisture. Afterwards, transfer the cucumber to a clean kitchen towel or cheesecloth and wring out as much liquid as physically possible over the sink!
+                            </p>
+                            
+                            <!-- Embedded Interactive Timer Widget -->
+                            <div class="bg-sand p-4 rounded-xl border border-stone-200/80 flex flex-wrap items-center justify-between gap-4 mt-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-stopwatch text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-500 font-semibold block uppercase tracking-wider">Salt Draining Timer</span>
+                                        <span id="timerDisplay" class="font-mono text-xl font-bold text-aegean-900">10:00</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button id="startTimerBtn" onclick="toggleTimer()" class="px-4 py-2 bg-aegean-800 hover:bg-aegean-900 text-white text-xs font-semibold rounded-lg transition-all shadow-sm">
+                                        Start 10 Min Timer
+                                    </button>
+                                    <button onclick="resetTimer()" class="px-3 py-2 bg-stone-200 hover:bg-stone-300 text-slate-700 text-xs font-semibold rounded-lg transition-all">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all" id="stepCard3">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step3Check" onclick="toggleStep(3)" class="w-6 h-6 mt-1 rounded text-olive-600 focus:ring-olive-500 border-gray-300 cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">3. Prep Herbs, Garlic & Acid</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Flavor Base</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Finely mince or grate 3-4 fresh garlic cloves using a microplane. Finely chop 2 tablespoons of fresh dill (or fresh mint). Squeeze 1 tablespoon of fresh lemon juice and measure out 1 teaspoon of red wine vinegar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all" id="stepCard4">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step4Check" onclick="toggleStep(4)" class="w-6 h-6 mt-1 rounded text-olive-600 focus:ring-olive-500 border-gray-300 cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">4. Whisk & Combine</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Assembly</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                In a medium mixing bowl, add 2 cups of thick Greek yogurt, squeezed cucumber, garlic, herbs, lemon juice, red wine vinegar, and 2 tablespoons of extra virgin olive oil. Whisk briskly until completely incorporated and silky smooth. Taste and season with extra salt or black pepper as needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all" id="stepCard5">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step5Check" onclick="toggleStep(5)" class="w-6 h-6 mt-1 rounded text-olive-600 focus:ring-olive-500 border-gray-300 cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">5. Chill & Garnish</h3>
+                                <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-semibold rounded-full border border-emerald-100">Final Touch</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Cover the bowl tightly with plastic wrap and chill in the refrigerator for at least 60 minutes. Before serving, drizzle with a swirl of high-quality Extra Virgin Olive Oil and a sprig of fresh dill. Serve cold!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage & Nutrition Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Storage Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-aegean-50 text-aegean-800 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-box-archive"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-aegean-900">How to Store</h3>
+                <ul class="space-y-3 text-sm text-slate-600">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-olive-600 mt-1"></i>
+                        <span><strong>Refrigerator:</strong> Store in an airtight container for up to 4 to 5 days.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                        <span><strong>Freezing:</strong> Do NOT freeze! Dairy and cucumber separate and become grainy upon thawing.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-rotate-right text-aegean-500 mt-1"></i>
+                        <span><strong>Refresh Tip:</strong> Stir briefly before re-serving if a little olive oil separates on top.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Nutrition Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-olive-50 text-olive-700 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-aegean-900">Estimated Nutrition</h3>
+                <p class="text-xs text-slate-500">Per 1/4 cup serving (Based on 8 total servings)</p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                    <div class="bg-sand p-3 rounded-xl text-center">
+                        <span class="text-xs text-slate-500 block">Calories</span>
+                        <span class="font-bold text-slate-800 text-base">65 kcal</span>
+                    </div>
+                    <div class="bg-sand p-3 rounded-xl text-center">
+                        <span class="text-xs text-slate-500 block">Protein</span>
+                        <span class="font-bold text-slate-800 text-base">4.5 g</span>
+                    </div>
+                    <div class="bg-sand p-3 rounded-xl text-center">
+                        <span class="text-xs text-slate-500 block">Healthy Fat</span>
+                        <span class="font-bold text-slate-800 text-base">4.0 g</span>
+                    </div>
+                    <div class="bg-sand p-3 rounded-xl text-center">
+                        <span class="text-xs text-slate-500 block">Carbs</span>
+                        <span class="font-bold text-slate-800 text-base">2.5 g</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting & FAQ Accordion -->
+        <section id="faq" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200 space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Got Questions?</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Troubleshooting & FAQ</h2>
+                <p class="text-slate-600 text-sm">Everything you need to know for classic Greek gyro perfection.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-3" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-sand transition-colors">
+                        <span>Why did my Tzatziki turn out watery?</span>
+                        <i id="faqIcon1" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer1" class="hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-stone-100">
+                        Watery sauce is almost always caused by insufficiently squeezed cucumber or using thin, non-strained yogurt. Be sure to use a cheesecloth or kitchen towel to wring out the cucumber forcefully after salting!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-sand transition-colors">
+                        <span>Can I use low-fat or non-fat yogurt?</span>
+                        <i id="faqIcon2" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer2" class="hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-stone-100">
+                        You can, but authentic restaurant style gyro house sauce relies on full-fat Greek yogurt (typically 5% or 10%) for its lush texture and to balance the garlic's punch. If using 0% fat yogurt, add an extra tablespoon of Extra Virgin Olive Oil.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-sand transition-colors">
+                        <span>Fresh Dill vs. Fresh Mint: Which is authentic?</span>
+                        <i id="faqIcon3" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer3" class="hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-stone-100">
+                        Both are authentic depending on the region of Greece! Northern Greek recipes heavily favor fresh dill, while southern regions and islands often add fresh mint. You can even use a combination of both for a lively profile.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-stone-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full p-5 text-left font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-sand transition-colors">
+                        <span>What else pairs great with this sauce besides Gyros?</span>
+                        <i id="faqIcon4" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer4" class="hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-stone-100">
+                        Tzatziki is incredibly versatile! It pairs amazingly with grilled chicken souvlaki, lamb chops, falafel, roasted potatoes, grilled zucchini, or simply as a dip for warm pita chips and fresh vegetables.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-aegean-900 text-white mt-16 border-t border-aegean-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="font-serif font-bold text-2xl text-amber-200">
+                Ouzo & Olive
+            </div>
+            <p class="text-slate-400 text-sm max-w-md mx-auto">
+                Bringing authentic, time-tested Greek household recipes right into your home kitchen.
+            </p>
+            <p class="text-xs text-slate-500 pt-6">
+                &copy; 2026 Greek Gyro Sauce Guide. Kali Orexi (Bon Appétit)!
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Master Base Ingredient Ratios (1x Batch)
+        const baseIngredients = [
+            { id: 1, name: "Plain Strained Greek Yogurt (Full Fat 5%+)", baseQty: 2, unit: "cups", icon: "fa-cow" },
+            { id: 2, name: "English Cucumber (Grated & Thoroughly Squeezed)", baseQty: 1, unit: "large cucumber", icon: "fa-leaf" },
+            { id: 3, name: "Extra Virgin Olive Oil", baseQty: 2, unit: "tbsp", icon: "fa-bottle-droplet" },
+            { id: 4, name: "Fresh Garlic (Microplaned or Minced)", baseQty: 3, unit: "cloves", icon: "fa-mortar-pestle" },
+            { id: 5, name: "Fresh Dill or Mint (Finely Chopped)", baseQty: 2, unit: "tbsp", icon: "fa-seedling" },
+            { id: 6, name: "Fresh Lemon Juice", baseQty: 1, unit: "tbsp", icon: "fa-lemon" },
+            { id: 7, name: "Red Wine Vinegar", baseQty: 1, unit: "tsp", icon: "fa-wine-bottle" },
+            { id: 8, name: "Fine Sea Salt (Half for draining, half to taste)", baseQty: 0.75, unit: "tsp", icon: "fa-salt-shaker" },
+            { id: 9, name: "Freshly Ground Black Pepper", baseQty: 0.25, unit: "tsp", icon: "fa-pepper-hot" }
+        ];
+
+        let currentScale = 1.0;
+        let checkedIngredients = new Set();
+        let checkedSteps = new Set();
+
+        // Initialize App on DOM Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderIngredients();
+            updateProgress();
+        });
+
+        // Scale Adjuster
+        function changeScale(delta) {
+            const newScale = currentScale + delta;
+            if (newScale >= 0.5 && newScale <= 4.0) {
+                currentScale = newScale;
+                document.getElementById('scaleLabel').innerText = `${currentScale}x (${Math.round(currentScale * 2)} cups)`;
+                document.getElementById('heroServingsDisplay').innerText = `${Math.round(currentScale * 6)}-${Math.round(currentScale * 8)} Servings`;
+                renderIngredients();
+            }
+        }
+
+        // Render Ingredients List dynamically
+        function renderIngredients() {
+            const container = document.getElementById('ingredientsList');
+            container.innerHTML = '';
+
+            baseIngredients.forEach(item => {
+                const scaledQty = formatQuantity(item.baseQty * currentScale);
+                const isChecked = checkedIngredients.has(item.id);
+
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-2xl border transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                    isChecked 
+                        ? 'bg-slate-50 border-slate-200 opacity-60 line-through' 
+                        : 'bg-sand/60 border-stone-200 hover:border-aegean-500/50 hover:bg-white'
+                }`;
+                card.onclick = () => toggleIngredient(item.id);
+
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" ${isChecked ? 'checked' : ''} 
+                            class="w-5 h-5 rounded text-olive-600 focus:ring-olive-500 border-gray-300 pointer-events-none">
+                        <span class="text-sm font-medium text-slate-800">${item.name}</span>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-aegean-800 bg-white px-3 py-1 rounded-full border border-stone-200 whitespace-nowrap shadow-xs">
+                        ${scaledQty} ${item.unit}
+                    </span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Helper to format fraction strings cleanly
+        function formatQuantity(num) {
+            if (num === 0.25) return "1/4";
+            if (num === 0.5) return "1/2";
+            if (num === 0.75) return "3/4";
+            if (num === 1.25) return "1 1/4";
+            if (num === 1.5) return "1 1/2";
+            if (num === 1.75) return "1 3/4";
+            return Number.isInteger(num) ? num.toString() : num.toFixed(1);
+        }
+
+        // Toggle Ingredient Checklist
+        function toggleIngredient(id) {
+            if (checkedIngredients.has(id)) {
+                checkedIngredients.delete(id);
+            } else {
+                checkedIngredients.add(id);
+            }
+            renderIngredients();
+        }
+
+        // Step completion tracker
+        function toggleStep(stepNum) {
+            const card = document.getElementById(`stepCard${stepNum}`);
+            const checkbox = document.getElementById(`step${stepNum}Check`);
+            
+            if (checkbox.checked) {
+                checkedSteps.add(stepNum);
+                card.classList.add('bg-emerald-50/40', 'border-emerald-200');
+            } else {
+                checkedSteps.delete(stepNum);
+                card.classList.remove('bg-emerald-50/40', 'border-emerald-200');
+            }
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const count = checkedSteps.size;
+            const total = 5;
+            const percent = (count / total) * 100;
+            
+            document.getElementById('progressText').innerText = `${count} of ${total} Done`;
+            document.getElementById('progressBar').style.width = `${percent}%`;
+        }
+
+        // Interactive Timer Logic for Step 2
+        let timerInterval = null;
+        let timerSeconds = 600; // 10 mins
+        let isTimerRunning = false;
+
+        function toggleTimer() {
+            const btn = document.getElementById('startTimerBtn');
+            if (isTimerRunning) {
+                clearInterval(timerInterval);
+                isTimerRunning = false;
+                btn.innerText = "Resume Timer";
+                btn.className = "px-4 py-2 bg-aegean-800 hover:bg-aegean-900 text-white text-xs font-semibold rounded-lg transition-all shadow-sm";
+            } else {
+                isTimerRunning = true;
+                btn.innerText = "Pause Timer";
+                btn.className = "px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold rounded-lg transition-all shadow-sm";
+                
+                timerInterval = setInterval(() => {
+                    if (timerSeconds > 0) {
+                        timerSeconds--;
+                        updateTimerDisplay();
+                    } else {
+                        clearInterval(timerInterval);
+                        isTimerRunning = false;
+                        btn.innerText = "Time's Up!";
+                        btn.className = "px-4 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-sm";
+                    }
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            timerSeconds = 600;
+            updateTimerDisplay();
+            const btn = document.getElementById('startTimerBtn');
+            btn.innerText = "Start 10 Min Timer";
+            btn.className = "px-4 py-2 bg-aegean-800 hover:bg-aegean-900 text-white text-xs font-semibold rounded-lg transition-all shadow-sm";
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(timerSeconds / 60);
+            const secs = timerSeconds % 60;
+            document.getElementById('timerDisplay').innerText = 
+                `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // FAQ Accordion Handler
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faqAnswer${index}`);
+            const icon = document.getElementById(`faqIcon${index}`);
+            
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
