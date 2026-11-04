@@ -1,0 +1,12 @@
+Edits: 
+- adding a hero section image.
+- adding a tutorial video.
+- adding favicon icon.
+- adding more FAQ.
+- adding logo image.
+- editing website name and editing the hero section text.
+
+Features: 
+- dark mode theme.
+- supporting Arabic and English languages. **
+- contact me section. **

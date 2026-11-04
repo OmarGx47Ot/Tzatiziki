@@ -1,0 +1,126 @@
+/* Ouzo & Olive — global project styles */
+:root {
+    color-scheme: light;
+    --color-phthalo: #0D3B2E;
+    --color-phthalo-dark: #082A20;
+    --color-cream: #FAF7F2;
+    --color-soft-green: #D5E3DC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-cream);
+}
+
+::selection {
+    background: var(--color-phthalo);
+    color: var(--color-cream);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-cream);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-phthalo);
+    border-radius: 4px;
+}
+
+/* Accessible keyboard focus */
+:focus-visible {
+    outline: 3px solid var(--color-phthalo);
+    outline-offset: 3px;
+}
+
+/* Keyboard focus on the dark hero must stay visible */
+#hero :focus-visible {
+    outline-color: var(--color-cream);
+}
+
+/* Native checkboxes follow the theme instead of the browser's default blue */
+input[type="checkbox"] {
+    accent-color: var(--color-phthalo);
+}
+
+/* Keep embedded video responsive */
+iframe {
+    display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* dark mode */
+.dark { color-scheme: dark; }
+.dark body { background-color: #0A1F18; }
+.dark input[type="checkbox"] { accent-color: #FAF7F2; }
+
+.dark .bg-sand { background-color: #0A1F18; }
+.dark .bg-sand\/90 { background-color: rgb(10 31 24 / 0.9); }
+.dark .bg-cream { background-color: #10291F; }
+.dark .bg-aegean-50,
+.dark .hover\:bg-aegean-50:hover { background-color: #17382D; }
+.dark .bg-aegean-100 { background-color: #24473B; }
+.dark .bg-phthalo\/10 { background-color: rgb(250 247 242 / 0.1); }
+
+.dark .border-phthalo-border,
+.dark .border-aegean-100 { border-color: #24473B; }
+.dark .border-phthalo,
+.dark .hover\:border-phthalo:hover,
+.dark .hover\:border-aegean-500\/40:hover { border-color: rgb(250 247 242 / 0.5); }
+.dark .border-aegean-500 { border-color: #2F6F5A; }
+.dark .ring-phthalo { --tw-ring-color: rgb(250 247 242 / 0.7); }
+
+.dark .text-phthalo,
+.dark .text-aegean-900,
+.dark .text-aegean-800,
+.dark .text-aegean-500,
+.dark .hover\:text-phthalo:hover { color: #FAF7F2; }
+.dark .text-olive-600 { color: #D5E3DC; }
+.dark .text-phthalo\/80 { color: rgb(250 247 242 / 0.8); }
+.dark .text-phthalo\/70 { color: rgb(250 247 242 / 0.7); }
+.dark .text-phthalo\/60 { color: rgb(250 247 242 / 0.6); }
+
+.dark .bg-aegean-500,
+.dark .bg-aegean-800 { background-color: #2F6F5A; }
+.dark .hover\:bg-aegean-900:hover { background-color: #3A806A; }
+
+.dark #hero .bg-cream { background-color: #FAF7F2; }
+.dark #hero .text-phthalo { color: #0D3B2E; }
+.dark #hero .hover\:bg-aegean-100:hover { background-color: #D5E3DC; }
+
+/* arabic & RTL */
+html[lang="ar"] body,
+html[lang="ar"] .font-sans,
+html[lang="ar"] .font-serif {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Letter-spacing breaks the joining of Arabic letters */
+html[lang="ar"] * {
+    letter-spacing: 0 !important;
+}
+
+html[lang="ar"] .uppercase {
+    text-transform: none;
+}
+
+html[lang="ar"] .italic {
+    font-style: normal;
+}

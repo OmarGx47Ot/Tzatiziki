@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
+    })();
+    </script>
+    <title>Authentic Greek Tzatziki Sauce Recipe</title>
+    <link rel="icon" type="image/png" href="assets/favicon.jpeg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpeg">
+    <meta name="theme-color" content="#0D3B2E">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind configuration and application logic -->
+    <script src="script.js"></script>
+    <!-- Project styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-sand text-phthalo font-sans antialiased selection:bg-aegean-500 selection:text-cream">
+
+        <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-sand/90 backdrop-blur-md border-b border-phthalo-border transition-all duration-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between gap-3 h-16 sm:h-20">
+                <div class="flex items-center gap-3 shrink-0">
+                    <div class="w-10 h-10 rounded-full overflow-hidden bg-aegean-800 flex items-center justify-center shadow-md shrink-0">
+                        <img src="assets/logo.jpeg" alt="Tzatziki at home logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="whitespace-nowrap">
+                        <span class="font-serif font-bold text-base sm:text-lg text-aegean-900 block leading-tight">Tzatziki at home</span>
+                        <span class="hidden sm:block text-xs text-olive-600 font-semibold tracking-wider uppercase">Authentic Greek Kitchen</span>
+                    </div>
+                </div>
+                <div class="hidden min-[1150px]:flex items-center gap-4 rtl:gap-5 whitespace-nowrap text-[13px] rtl:text-sm font-medium text-phthalo/80">
+                    <a href="#hero" class="hover:text-phthalo transition-colors">Overview</a>
+                    <a href="#video" class="hover:text-phthalo transition-colors">Video Masterclass</a>
+                    <a href="#pro-tips" class="hover:text-phthalo transition-colors">Secrets & Tips</a>
+                    <a href="#ingredients" class="hover:text-phthalo transition-colors">Ingredients</a>
+                    <a href="#steps" class="hover:text-phthalo transition-colors">Step-by-Step</a>
+                    <a href="#faq" class="hover:text-phthalo transition-colors">FAQ</a>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button id="langToggle" type="button" aria-label="Switch language" data-no-i18n
+                            class="h-10 px-3 rounded-full border border-phthalo-border bg-cream text-phthalo text-sm font-semibold flex items-center justify-center hover:bg-aegean-50 transition-colors">
+                        عربي
+                    </button>
+                    <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+                            class="w-10 h-10 rounded-full border border-phthalo-border bg-cream text-phthalo flex items-center justify-center hover:bg-aegean-50 transition-colors">
+                        <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="#ingredients" class="hidden sm:inline-flex items-center justify-center whitespace-nowrap px-4 py-2 rounded-full bg-aegean-800 text-cream text-xs sm:text-sm font-semibold hover:bg-aegean-900 transition-all shadow-sm hover:shadow-md">
+                        Start Cooking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 sm:space-y-16">
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-aegean-900 via-aegean-800 to-aegean-900 text-cream p-6 sm:p-10 lg:p-12 shadow-2xl">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FAF7F2_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-xs font-semibold tracking-wide uppercase text-cream">
+                        <i class="fa-solid fa-star text-phthalo-border"></i> Authentic Street-Food Style Tzatziki
+                    </div>
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-cream leading-tight">
+                        Authentic Greek <br class="hidden sm:inline"/><span class="text-phthalo-border italic font-normal">Tzatziki Sauce</span>
+                    </h1>
+                    <p class="text-cream/80 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                        Master the cool, garlic-infused, extra-creamy Greek cucumber sauce from scratch. Perfect for gyros, grilled meats, crisp veggies, and warm pita bread.
+                    </p>
+                    
+                    <!-- Recipe Quick Stats Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-cream/20 my-6">
+                        <div class="text-center sm:text-start">
+                            <span class="text-xs text-cream/70 block uppercase tracking-wider">Prep Time</span>
+                            <span class="font-bold text-lg text-cream">15 Mins</span>
+                        </div>
+                        <div class="text-center sm:text-start border-s border-cream/20 ps-2 sm:ps-4">
+                            <span class="text-xs text-cream/70 block uppercase tracking-wider">Chill Time</span>
+                            <span class="font-bold text-lg text-cream">1 Hour</span>
+                        </div>
+                        <div class="text-center sm:text-start sm:border-s border-cream/20 ps-2 sm:ps-4">
+                            <span class="text-xs text-cream/70 block uppercase tracking-wider">Skill Level</span>
+                            <span class="font-bold text-lg text-phthalo-border">Easy (A-Z)</span>
+                        </div>
+                        <div class="text-center sm:text-start border-s border-cream/20 ps-2 sm:ps-4">
+                            <span class="text-xs text-cream/70 block uppercase tracking-wider">Yield</span>
+                            <span class="font-bold text-lg text-cream" id="heroServingsDisplay">6-8 Servings</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#ingredients" class="px-6 py-3.5 rounded-xl bg-cream hover:bg-aegean-100 text-phthalo font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                            <i class="fa-solid fa-utensils"></i> Jump to Recipe
+                        </a>
+                        <a href="#video" class="px-6 py-3.5 rounded-xl bg-cream/10 hover:bg-cream/20 text-cream font-semibold text-sm backdrop-blur-md transition-all border border-cream/30 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-play text-phthalo-border text-lg"></i> Watch Tutorial
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-cream/30 bg-phthalo group">
+                        <img src="assets/tzatziki-hero.jpeg"
+                             alt="Greek Tzatziki Gyro Sauce Bowl"
+                             class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                             id="heroImage">
+                        <div class="absolute inset-0 bg-gradient-to-t from-aegean-900/90 via-transparent to-transparent flex items-end p-6">
+                            <p class="text-xs text-cream/90 italic">
+                                "The secret is in the cucumber drain!" &mdash; Chef Omar Rafeek
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Tutorial Section -->
+        <section id="video" class="bg-cream rounded-3xl p-6 sm:p-10 shadow-sm border border-phthalo-border">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Visual Masterclass</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-aegean-900">Watch How It's Made</h2>
+                <p class="text-phthalo/80 text-sm sm:text-base">Follow along with this step-by-step video guide to learn proper cucumber squeezing techniques and ingredient ratios.</p>
+            </div>
+            
+            <div class="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden bg-aegean-900 shadow-xl border border-phthalo-border">
+                <video class="w-full h-full object-contain"
+                       controls
+                       playsinline
+                       preload="metadata"
+                       poster="assets/video-poster.jpeg">
+                    <source src="assets/tzatziki-tutorial.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Pro Tips / Secrets Section -->
+        <section id="pro-tips" class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">The Greek Kitchen Rules</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">4 Golden Secrets to Perfection</h2>
+                <p class="text-phthalo/80 text-sm">Avoid common beginner mistakes like watery or bland sauce with these simple principles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tip 1 -->
+                <div class="bg-cream border border-phthalo-border p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-aegean-500 text-cream flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        1
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Thoroughly Drain the Cucumber</h3>
+                        <p class="text-phthalo/80 text-sm leading-relaxed">
+                            Cucumbers are over 95% water. Grate them, salt them, wait 10 minutes, then wring out every single drop using a cheesecloth or clean kitchen towel. Water is the #1 enemy of thick Tzatziki!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="bg-cream border border-phthalo-border p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-aegean-500 text-cream flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        2
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Use Authentic Full-Fat Yogurt</h3>
+                        <p class="text-phthalo/80 text-sm leading-relaxed">
+                            Always opt for full-fat (10% or 5%) strained Greek yogurt. If using standard yogurt, let it drain through a coffee filter overnight to achieve the signature creamy consistency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="bg-cream border border-phthalo-border p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-aegean-500 text-cream flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        3
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Finely Grated Fresh Garlic</h3>
+                        <p class="text-phthalo/80 text-sm leading-relaxed">
+                            Never use garlic powder! Microplane or finely grate fresh garlic cloves so they blend smoothly into the yogurt without harsh crunchy bits.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 4 -->
+                <div class="bg-cream border border-phthalo-border p-6 rounded-2xl flex gap-4 items-start hover:border-aegean-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-aegean-500 text-cream flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-sm">
+                        4
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="font-serif font-bold text-lg text-aegean-900">Chilling is Essential</h3>
+                        <p class="text-phthalo/80 text-sm leading-relaxed">
+                            Freshly mixed Tzatziki can taste sharp. Let it rest in the refrigerator for at least 1 hour before serving to let the garlic, dill, and lemon mellow into harmony.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Ingredients Section -->
+        <section id="ingredients" class="bg-cream rounded-3xl p-6 sm:p-10 shadow-sm border border-phthalo-border">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-phthalo-border">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Mise En Place</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Ingredients Checklist</h2>
+                    <p class="text-phthalo/70 text-sm mt-1">Check off items as you gather them in your kitchen.</p>
+                </div>
+
+                <!-- Interactive Serving Scaler -->
+                <div class="bg-sand p-4 rounded-2xl border border-phthalo-border flex items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-phthalo uppercase tracking-wider">Batch Size:</span>
+                    <div class="flex items-center gap-2">
+                        <button id="btnScaleDown" data-scale="-0.5" class="w-9 h-9 rounded-xl bg-cream border border-phthalo-border text-phthalo font-bold hover:bg-aegean-50 active:scale-95 transition-all shadow-sm flex items-center justify-center">
+                            -
+                        </button>
+                        <span id="scaleLabel" class="font-bold text-aegean-800 text-base min-w-[70px] text-center">1x (2 cups)</span>
+                        <button id="btnScaleUp" data-scale="0.5" class="w-9 h-9 rounded-xl bg-cream border border-phthalo-border text-phthalo font-bold hover:bg-aegean-50 active:scale-95 transition-all shadow-sm flex items-center justify-center">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List of Ingredients -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8" id="ingredientsList">
+                <!-- Injected via JavaScript for live scaling -->
+            </div>
+        </section>
+
+        <!-- Interactive Step-by-Step Instructions -->
+        <section id="steps" class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-olive-600">A to Z Workflow</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Step-by-Step Instructions</h2>
+                </div>
+                <!-- Progress Indicator -->
+                <div class="bg-cream px-5 py-3 rounded-2xl border border-phthalo-border shadow-sm flex items-center gap-4">
+                    <div class="text-end">
+                        <span class="text-xs text-phthalo/70 block uppercase tracking-wider font-semibold">Progress</span>
+                        <span id="progressText" class="font-bold text-aegean-800 text-sm">0 of 5 Done</span>
+                    </div>
+                    <div class="w-24 bg-aegean-50 h-3 rounded-full overflow-hidden border border-phthalo-border">
+                        <div id="progressBar" class="bg-aegean-500 h-full w-0 transition-all duration-500"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steps Grid / Container -->
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="step-card bg-cream rounded-2xl p-6 border border-phthalo-border shadow-sm hover:shadow-md transition-all" id="stepCard1">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step1Check" data-step="1" class="w-6 h-6 mt-1 rounded text-phthalo focus:ring-phthalo border-phthalo-border cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">1. Grate the Cucumber</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Prep Work</span>
+                            </div>
+                            <p class="text-phthalo/80 text-sm leading-relaxed">
+                                Wash 1 large English cucumber thoroughly. You can keep the skin on for extra color and vitamins or peel it if preferred. Using the large holes of a box grater, grate the cucumber into a bowl.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 (With Interactive Timer) -->
+                <div class="step-card bg-cream rounded-2xl p-6 border border-phthalo-border shadow-sm hover:shadow-md transition-all" id="stepCard2">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step2Check" data-step="2" class="w-6 h-6 mt-1 rounded text-phthalo focus:ring-phthalo border-phthalo-border cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">2. Salt & Squeeze (The Secret Step)</h3>
+                                <span class="px-3 py-1 bg-aegean-500 text-cream text-xs font-semibold rounded-full border border-aegean-500">Crucial Step</span>
+                            </div>
+                            <p class="text-phthalo/80 text-sm leading-relaxed">
+                                Toss the grated cucumber with ½ teaspoon of sea salt. Let it rest for 10 minutes to draw out moisture. Afterwards, transfer the cucumber to a clean kitchen towel or cheesecloth and wring out as much liquid as physically possible over the sink!
+                            </p>
+                            
+                            <!-- Embedded Interactive Timer Widget -->
+                            <div class="bg-sand p-4 rounded-xl border border-phthalo-border flex flex-wrap items-center justify-between gap-4 mt-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-phthalo/10 text-phthalo flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-stopwatch text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-phthalo/70 font-semibold block uppercase tracking-wider">Salt Draining Timer</span>
+                                        <span id="timerDisplay" class="font-mono text-xl font-bold text-aegean-900">10:00</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button id="startTimerBtn" data-timer-action="toggle" class="px-4 py-2 bg-aegean-800 hover:bg-aegean-900 text-cream text-xs font-semibold rounded-lg transition-all shadow-sm">
+                                        Start 10 Min Timer
+                                    </button>
+                                    <button data-timer-action="reset" class="px-3 py-2 bg-aegean-100 hover:bg-aegean-50 text-phthalo text-xs font-semibold rounded-lg transition-all">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card bg-cream rounded-2xl p-6 border border-phthalo-border shadow-sm hover:shadow-md transition-all" id="stepCard3">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step3Check" data-step="3" class="w-6 h-6 mt-1 rounded text-phthalo focus:ring-phthalo border-phthalo-border cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">3. Prep Herbs, Garlic & Acid</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Flavor Base</span>
+                            </div>
+                            <p class="text-phthalo/80 text-sm leading-relaxed">
+                                Finely mince or grate 3-4 fresh garlic cloves using a microplane. Finely chop 2 tablespoons of fresh dill (or fresh mint). Squeeze 1 tablespoon of fresh lemon juice and measure out 1 teaspoon of red wine vinegar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card bg-cream rounded-2xl p-6 border border-phthalo-border shadow-sm hover:shadow-md transition-all" id="stepCard4">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step4Check" data-step="4" class="w-6 h-6 mt-1 rounded text-phthalo focus:ring-phthalo border-phthalo-border cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">4. Whisk & Combine</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Assembly</span>
+                            </div>
+                            <p class="text-phthalo/80 text-sm leading-relaxed">
+                                In a medium mixing bowl, add 2 cups of thick Greek yogurt, squeezed cucumber, garlic, herbs, lemon juice, red wine vinegar, and 2 tablespoons of extra virgin olive oil. Whisk briskly until completely incorporated and silky smooth. Taste and season with extra salt or black pepper as needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card bg-cream rounded-2xl p-6 border border-phthalo-border shadow-sm hover:shadow-md transition-all" id="stepCard5">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="step5Check" data-step="5" class="w-6 h-6 mt-1 rounded text-phthalo focus:ring-phthalo border-phthalo-border cursor-pointer">
+                        <div class="flex-1 space-y-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-aegean-900">5. Chill & Garnish</h3>
+                                <span class="px-3 py-1 bg-aegean-50 text-aegean-800 text-xs font-semibold rounded-full border border-aegean-100">Final Touch</span>
+                            </div>
+                            <p class="text-phthalo/80 text-sm leading-relaxed">
+                                Cover the bowl tightly with plastic wrap and chill in the refrigerator for at least 60 minutes. Before serving, drizzle with a swirl of high-quality Extra Virgin Olive Oil and a sprig of fresh dill. Serve cold!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage & Nutrition Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Storage Card -->
+            <div class="bg-cream rounded-3xl p-6 sm:p-8 border border-phthalo-border shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-aegean-50 text-aegean-800 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-box-archive"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-aegean-900">How to Store</h3>
+                <ul class="space-y-3 text-sm text-phthalo/80">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-phthalo mt-1"></i>
+                        <span><strong>Refrigerator:</strong> Store in an airtight container for up to 4 to 5 days.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-phthalo mt-1"></i>
+                        <span><strong>Freezing:</strong> Do NOT freeze! Dairy and cucumber separate and become grainy upon thawing.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-rotate-right text-aegean-500 mt-1"></i>
+                        <span><strong>Refresh Tip:</strong> Stir briefly before re-serving if a little olive oil separates on top.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Nutrition Card -->
+            <div class="bg-cream rounded-3xl p-6 sm:p-8 border border-phthalo-border shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-aegean-50 text-aegean-800 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="font-serif font-bold text-xl text-aegean-900">Estimated Nutrition</h3>
+                <p class="text-xs text-phthalo/70">Per 1/4 cup serving (Based on 8 total servings)</p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                    <div class="bg-aegean-50 p-3 rounded-xl text-center">
+                        <span class="text-xs text-phthalo/70 block">Calories</span>
+                        <span class="font-bold text-phthalo text-base">65 kcal</span>
+                    </div>
+                    <div class="bg-aegean-50 p-3 rounded-xl text-center">
+                        <span class="text-xs text-phthalo/70 block">Protein</span>
+                        <span class="font-bold text-phthalo text-base">4.5 g</span>
+                    </div>
+                    <div class="bg-aegean-50 p-3 rounded-xl text-center">
+                        <span class="text-xs text-phthalo/70 block">Healthy Fat</span>
+                        <span class="font-bold text-phthalo text-base">4.0 g</span>
+                    </div>
+                    <div class="bg-aegean-50 p-3 rounded-xl text-center">
+                        <span class="text-xs text-phthalo/70 block">Carbs</span>
+                        <span class="font-bold text-phthalo text-base">2.5 g</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting & FAQ Accordion -->
+        <section id="faq" class="bg-cream rounded-3xl p-6 sm:p-10 shadow-sm border border-phthalo-border space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Got Questions?</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Troubleshooting & FAQ</h2>
+                <p class="text-phthalo/80 text-sm">Everything you need to know for classic Greek gyro perfection.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-3" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-phthalo-border rounded-2xl overflow-hidden">
+                    <button data-faq="1" class="w-full p-5 text-start font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-aegean-50 transition-colors">
+                        <span>Why did my Tzatziki turn out watery?</span>
+                        <i id="faqIcon1" class="fa-solid fa-chevron-down text-phthalo/60 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer1" class="hidden p-5 pt-0 text-phthalo/80 text-sm leading-relaxed border-t border-phthalo-border">
+                        Watery sauce is almost always caused by insufficiently squeezed cucumber or using thin, non-strained yogurt. Be sure to use a cheesecloth or kitchen towel to wring out the cucumber forcefully after salting!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-phthalo-border rounded-2xl overflow-hidden">
+                    <button data-faq="2" class="w-full p-5 text-start font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-aegean-50 transition-colors">
+                        <span>Can I use low-fat or non-fat yogurt?</span>
+                        <i id="faqIcon2" class="fa-solid fa-chevron-down text-phthalo/60 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer2" class="hidden p-5 pt-0 text-phthalo/80 text-sm leading-relaxed border-t border-phthalo-border">
+                        You can, but authentic restaurant style Tzatziki sauce relies on full-fat Greek yogurt (typically 5% or 10%) for its lush texture and to balance the garlic's punch. If using 0% fat yogurt, add an extra tablespoon of Extra Virgin Olive Oil.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-phthalo-border rounded-2xl overflow-hidden">
+                    <button data-faq="3" class="w-full p-5 text-start font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-aegean-50 transition-colors">
+                        <span>Fresh Dill vs. Fresh Mint: Which is authentic?</span>
+                        <i id="faqIcon3" class="fa-solid fa-chevron-down text-phthalo/60 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer3" class="hidden p-5 pt-0 text-phthalo/80 text-sm leading-relaxed border-t border-phthalo-border">
+                        Both are authentic depending on the region of Greece! Northern Greek recipes heavily favor fresh dill, while southern regions and islands often add fresh mint. You can even use a combination of both for a lively profile.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-phthalo-border rounded-2xl overflow-hidden">
+                    <button data-faq="4" class="w-full p-5 text-start font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-aegean-50 transition-colors">
+                        <span>What else pairs great with this sauce besides Gyros?</span>
+                        <i id="faqIcon4" class="fa-solid fa-chevron-down text-phthalo/60 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer4" class="hidden p-5 pt-0 text-phthalo/80 text-sm leading-relaxed border-t border-phthalo-border">
+                        Tzatziki is incredibly versatile! It pairs amazingly with grilled chicken souvlaki, lamb chops, falafel, roasted potatoes, grilled zucchini, or simply as a dip for warm pita chips and fresh vegetables.
+                    </div>
+                   
+            </div>                
+                    <!-- FAQ Item 5 -->
+<div class="border border-phthalo-border rounded-2xl overflow-hidden">
+    <button data-faq="5" class="w-full p-5 text-start font-serif font-bold text-aegean-900 flex justify-between items-center hover:bg-aegean-50 transition-colors">
+        <span>Can I make this sauce ahead of time?</span>
+        <i id="faqIcon5" class="fa-solid fa-chevron-down text-phthalo/60 transition-transform"></i>
+    </button>
+    <div id="faqAnswer5" class="hidden p-5 pt-0 text-phthalo/80 text-sm leading-relaxed border-t border-phthalo-border">
+        Absolutely! It actually tastes better after resting overnight in the fridge, as the garlic and herbs have more time to blend with the yogurt. Just stir before serving.
+    </div>
+</div>
+
+
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="bg-cream rounded-3xl p-6 sm:p-10 shadow-sm border border-phthalo-border">
+            <div class="max-w-2xl mx-auto text-center space-y-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-olive-600">Get In Touch</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-aegean-900">Contact Me</h2>
+                <p class="text-phthalo/80 text-sm sm:text-base leading-relaxed">
+                    Have a question, a suggestion, or your own twist on this recipe? Send me an email and I'll get back to you.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <a href="mailto:oelmashad9@gmail.com?subject=Hello from Tzatziki at home"
+                       class="px-6 py-3.5 rounded-xl bg-aegean-800 hover:bg-aegean-900 text-cream font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Send Me an Email
+                    </a>
+                    <span class="text-sm font-medium text-phthalo/80 break-all">oelmashad9@gmail.com</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-aegean-900 text-cream mt-16 border-t border-aegean-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="font-serif font-bold text-2xl text-phthalo-border">
+                Tzatziki at home
+            </div>
+            <p class="text-cream/70 text-sm max-w-md mx-auto">
+                Bringing authentic, time-tested Greek household recipes right into your home kitchen.
+            </p>
+            <p class="text-xs text-cream/60 pt-6">
+                &copy; 2026 Greek Gyro Sauce Guide. Kali Orexi (Bon Appétit)!
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+
+    <script src="i18n.js"></script>
+    
+</body>
+</html>
