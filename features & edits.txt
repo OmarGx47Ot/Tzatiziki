@@ -10,3 +10,4 @@ Features:
 - dark mode theme.
 - supporting Arabic and English languages. **
 - contact me section. **
+- Adding "Copy Shopping List" button for the supported languages. 
