@@ -4,6 +4,11 @@
     'use strict';
 
     const AR = {
+
+        "Copy Shopping List": "انسخ قائمة التسوق",
+        "Copied!": "تم النسخ!",
+        "Tzatziki Sauce": "صوص التزاتزيكي",
+
         "Tzatziki Sauce": "صوص التزاتزيكي",
         "\"The secret is in the cucumber drain!\" — Chef Omar Rafeek": "\"السر في تصفية الخيار!\" — الشيف عمر رفيق",
         "Authentic Greek Tzatziki Sauce Recipe": "وصفة صوص التزاتزيكي اليوناني الأصيل",

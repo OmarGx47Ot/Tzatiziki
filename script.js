@@ -133,6 +133,10 @@ let timerSeconds = 600;
 
 let isTimerRunning = false;
 
+const Copied_Message_Milliseconds = 2000;
+const Copy_Button_Default_Label = 'Copy Shopping List';
+const Copy_Button_Success_Label = 'Copied!';
+
 
 /* =========================================
    4. INITIALIZE APPLICATION
@@ -203,6 +207,9 @@ function bindUIEvents() {
 
     });
 
+const Copy_List_Button_Element = document.getElementById('copyListBtn');
+
+Copy_List_Button_Element?.addEventListener('click', copyShoppingList);
 
     // Hero image fallback
     const heroImage = document.getElementById('heroImage');
@@ -651,6 +658,29 @@ document.addEventListener('DOMContentLoaded', () => {
         .getElementById('themeToggle')
         ?.addEventListener('click', toggleTheme);
 });
+
+function copyShoppingList() {
+    const Copy_List_Label_Element = document.getElementById('copyListLabel');
+
+    const Ingredient_Card_Elements = Array.from(document.querySelectorAll('#ingredientsList > div'));
+
+    const Shopping_List_Lines = Ingredient_Card_Elements.map((Ingredient_Card_Element) => {
+        const Ingredient_Name_Text = Ingredient_Card_Element.querySelector(':scope > div > span').textContent.trim();
+        const Ingredient_Quantity_Text = Ingredient_Card_Element.querySelector(':scope > span').textContent.trim();
+
+        return `- ${Ingredient_Quantity_Text} ${Ingredient_Name_Text}`;
+    });
+    
+    const Shopping_List_Text = Shopping_List_Lines.join('\n');
+
+    navigator.clipboard.writeText(Shopping_List_Text).then(() => {
+        Copy_List_Label_Element.textContent = Copy_Button_Success_Label;
+
+        setTimeout(() => {
+            Copy_List_Label_Element.textContent = Copy_Button_Default_Label;
+        }, Copied_Message_Milliseconds);
+    });
+}
 
 /* =========================================
    END OF OUZO & OLIVE JAVASCRIPT
